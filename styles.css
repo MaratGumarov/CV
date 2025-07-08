@@ -241,9 +241,15 @@ body {
 
 .section {
     margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-color);
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease forwards;
+    transition: var(--transition);
 }
 
 .section:nth-child(1) { animation-delay: 0.1s; }
@@ -251,6 +257,11 @@ body {
 .section:nth-child(3) { animation-delay: 0.3s; }
 .section:nth-child(4) { animation-delay: 0.4s; }
 .section:nth-child(5) { animation-delay: 0.5s; }
+
+.section:hover {
+    box-shadow: var(--shadow-medium);
+    border-color: var(--primary-color);
+}
 
 @keyframes fadeInUp {
     to {
@@ -302,7 +313,7 @@ body {
     color: var(--text-secondary);
     max-width: 800px;
     padding: 1.5rem;
-    background: var(--bg-secondary);
+    background: var(--bg-tertiary);
     border-radius: var(--border-radius);
     border-left: 4px solid var(--primary-color);
     position: relative;
@@ -327,7 +338,7 @@ body {
 }
 
 .skill-category {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
@@ -406,7 +417,7 @@ body {
 }
 
 .timeline-content {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
@@ -746,7 +757,12 @@ body {
     }
     
     .section {
+        padding: 1rem;
+    }
+    
+    .section {
         margin-bottom: 2rem;
+        padding: 1.5rem;
     }
     
     .skill-category,
