@@ -1,18 +1,21 @@
 // Theme toggle functionality
 function toggleTheme() {
     const body = document.body;
-    const themeToggle = document.querySelector('.btn-secondary');
+    const themeToggle = document.querySelector('.btn-secondary[onclick*="toggleTheme"]');
     const icon = themeToggle.querySelector('i');
+    const textNode = themeToggle.childNodes[themeToggle.childNodes.length - 1];
     
     body.classList.toggle('dark-theme');
     
     if (body.classList.contains('dark-theme')) {
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
+        if (textNode.nodeType === Node.TEXT_NODE) textNode.textContent = ' Light Mode';
         localStorage.setItem('theme', 'dark');
     } else {
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
+        if (textNode.nodeType === Node.TEXT_NODE) textNode.textContent = ' Dark Mode';
         localStorage.setItem('theme', 'light');
     }
 }
@@ -21,15 +24,20 @@ function toggleTheme() {
 function loadTheme() {
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
-    const themeToggle = document.querySelector('.btn-secondary');
+    const themeToggle = document.querySelector('.btn-secondary[onclick*="toggleTheme"]');
+    if (!themeToggle) return;
+    const icon = themeToggle.querySelector('i');
+    const textNode = themeToggle.childNodes[themeToggle.childNodes.length - 1];
     
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
-        if (themeToggle) {
-            const icon = themeToggle.querySelector('i');
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        if (textNode.nodeType === Node.TEXT_NODE) textNode.textContent = ' Light Mode';
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        if (textNode.nodeType === Node.TEXT_NODE) textNode.textContent = ' Dark Mode';
     }
 }
 
@@ -37,36 +45,6 @@ function loadTheme() {
 function smoothScroll(target) {
     document.querySelector(target).scrollIntoView({
         behavior: 'smooth'
-    });
-}
-
-// Animate elements on scroll
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.section, .experience-item, .education-item');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    elements.forEach(element => {
-        observer.observe(element);
-    });
-}
-
-// Skill tags animation
-function animateSkillTags() {
-    const skillTags = document.querySelectorAll('.skill-tag, .tech-tag');
-    
-    skillTags.forEach((tag, index) => {
-        tag.style.animationDelay = `${index * 0.1}s`;
-        tag.classList.add('fade-in');
     });
 }
 
@@ -133,50 +111,12 @@ function showNotification(message) {
     }, 3000);
 }
 
-// Typing animation for the title
-function typeWriter() {
-    const titleElement = document.querySelector('.title');
-    const text = titleElement.textContent;
-    titleElement.textContent = '';
-    
-    let i = 0;
-    const timer = setInterval(() => {
-        if (i < text.length) {
-            titleElement.textContent += text.charAt(i);
-            i++;
-        } else {
-            clearInterval(timer);
-        }
-    }, 100);
-}
-
-// Add hover effects to skill tags
-function addSkillTagEffects() {
-    const skillTags = document.querySelectorAll('.skill-tag, .tech-tag');
-    
-    skillTags.forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-2px) scale(1.05)';
-        });
-        
-        tag.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-}
-
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     loadTheme();
-    animateOnScroll();
-    animateSkillTags();
     handleContactForm();
     handlePrint();
     copyEmail();
-    addSkillTagEffects();
-    
-    // Add some delay for the typing animation
-    setTimeout(typeWriter, 1000);
     
     // Add scroll to top functionality
     const scrollToTop = document.createElement('button');
