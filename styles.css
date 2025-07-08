@@ -545,8 +545,8 @@ body {
 .tech-tag {
     background: var(--bg-tertiary);
     color: var(--text-secondary);
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
     font-size: 0.875rem;
     font-weight: 500;
     border: 1px solid var(--border-color);
@@ -884,4 +884,12 @@ body.dark-theme .footer-links a {
 body.dark-theme .footer-links a:hover {
     background: var(--primary-color);
     color: white;
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
 } 
