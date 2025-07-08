@@ -636,6 +636,32 @@ body {
     box-shadow: var(--shadow-medium);
 }
 
+.footer-links {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.footer-link:hover {
+    background: var(--primary-dark);
+    color: #fff;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
