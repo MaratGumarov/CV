@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marat Gumarov - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/150x150/4f46e5/ffffff?text=MG" alt="Marat Gumarov" id="profile-img">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="name">Marat Gumarov</h1>
+                        <p class="title">Java Developer & Data Engineer</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fab fa-telegram"></i>
+                                <a href="https://t.me/MaratGumarov" target="_blank">@MaratGumarov</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ikey678@gmail.com">ikey678@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/MaratGumarov" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" onclick="window.print()">
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                        Dark Mode
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Summary Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Summary
+                </h2>
+                <div class="section-content">
+                    <p class="summary-text">
+                        Seasoned Java Developer and Data Engineer with extensive experience in designing scalable systems and 
+                        enhancing data integration and processing using cutting-edge technologies. Skilled in developing 
+                        high-performing applications and backend systems, with a focus on driving technological advancements 
+                        and delivering robust solutions.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-code"></i>
+                    Languages & Core Skills
+                </h2>
+                <div class="section-content">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Russian (Native)</span>
+                                <span class="skill-tag">English (Intermediate)</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Kotlin</span>
+                                <span class="skill-tag">Scala</span>
+                                <span class="skill-tag">C#</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Frameworks & Technologies</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Spring Boot</span>
+                                <span class="skill-tag">Microservices</span>
+                                <span class="skill-tag">GraphQL</span>
+                                <span class="skill-tag">JPA</span>
+                                <span class="skill-tag">Jooq</span>
+                                <span class="skill-tag">MapStruct</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Big Data & Cloud</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Apache Spark</span>
+                                <span class="skill-tag">Hadoop</span>
+                                <span class="skill-tag">Apache Sqoop</span>
+                                <span class="skill-tag">AWS Lambda</span>
+                                <span class="skill-tag">S3</span>
+                                <span class="skill-tag">SQS</span>
+                                <span class="skill-tag">SNS</span>
+                                <span class="skill-tag">Cognito</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Tools & DevOps</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">CI/CD</span>
+                                <span class="skill-tag">Gradle</span>
+                                <span class="skill-tag">Test Containers</span>
+                                <span class="skill-tag">JUnit</span>
+                                <span class="skill-tag">Performance Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Work Experience
+                </h2>
+                <div class="section-content">
+                    <div class="experience-timeline">
+                        <!-- Provectus -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="experience-title">
+                                    <h3>Backend Developer</h3>
+                                    <span class="company">Provectus</span>
+                                </div>
+                                <div class="experience-period">
+                                    <span class="period">Mar 2022 - Present</span>
+                                    <span class="location">Serbia</span>
+                                </div>
+                            </div>
+                            <div class="experience-content">
+                                <ul class="achievements">
+                                    <li>Developed a comprehensive project and employee management system, significantly improving operational efficiency and data handling</li>
+                                    <li>Implemented a robust notification system incorporating change logs, message queues, and Slack integration, enabling tailored alerts based on user availability and time zones, reducing response delays</li>
+                                    <li>Designed and refined a role-based access control (RBAC) system to manage access rights securely and efficiently, ensuring proper authorization and data security</li>
+                                    <li>Created a changelog mechanism to maintain transparency and data integrity across the system, facilitating better auditing and reliability</li>
+                                    <li>Diagnosed and resolved critical system issues, improving overall stability and ensuring smooth operation for end users. Conducted extensive performance optimizations, including caching and database query improvements, which led to faster response times and improved system efficiency</li>
+                                    <li>Participated in the development of a microservice architecture for a smart search service within corporate documents (PDF, PNG, JPG)</li>
+                                    <li>Developed a modern GraphQL API for legacy services. Implemented a solution for generating GraphQL APIs and semi-automatic mapping of GraphQL queries to JPA criteria, simplifying system development</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">Jooq</span>
+                                    <span class="tech-tag">Test Containers</span>
+                                    <span class="tech-tag">MapStruct</span>
+                                    <span class="tech-tag">AWS Lambda</span>
+                                    <span class="tech-tag">Cognito</span>
+                                    <span class="tech-tag">S3</span>
+                                    <span class="tech-tag">SQS</span>
+                                    <span class="tech-tag">SNS</span>
+                                    <span class="tech-tag">GraphQL</span>
+                                    <span class="tech-tag">JNI</span>
+                                    <span class="tech-tag">JPA</span>
+                                    <span class="tech-tag">Apache POI</span>
+                                    <span class="tech-tag">Slack API</span>
+                                    <span class="tech-tag">Gradle</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sberbank -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="experience-title">
+                                    <h3>Java Developer / Data Engineer</h3>
+                                    <span class="company">Sberbank</span>
+                                </div>
+                                <div class="experience-period">
+                                    <span class="period">2018 – 2022</span>
+                                    <span class="location">Russia</span>
+                                </div>
+                            </div>
+                            <div class="experience-content">
+                                <ul class="achievements">
+                                    <li>Participated in the development of a tool for fast streaming of data from DBMS (mainly Oracle) to Hadoop, enabling the transfer of tens of terabytes daily into the Sberbank data lake</li>
+                                    <li>Contributed to the development and support of all major project modules, including the initial loading module, incremental data load module, data application module, and backup module</li>
+                                    <li>Modified the open-source Apache Sqoop tool to implement missing functionality, enhancing its capability to suit project requirements</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Hadoop</span>
+                                    <span class="tech-tag">Apache Spark</span>
+                                    <span class="tech-tag">Oracle GoldenGate for Big Data</span>
+                                    <span class="tech-tag">Apache Sqoop</span>
+                                    <span class="tech-tag">Scala</span>
+                                    <span class="tech-tag">Bash</span>
+                                    <span class="tech-tag">Hive</span>
+                                    <span class="tech-tag">Oozie</span>
+                                    <span class="tech-tag">Spring</span>
+                                    <span class="tech-tag">JUnit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sberbank-Technologies -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="experience-title">
+                                    <h3>Java Developer</h3>
+                                    <span class="company">Sberbank-Technologies</span>
+                                </div>
+                                <div class="experience-period">
+                                    <span class="period">2017 – 2018</span>
+                                    <span class="location">Russia</span>
+                                </div>
+                            </div>
+                            <div class="experience-content">
+                                <ul class="achievements">
+                                    <li>Development of an authentication service for internal resources</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Spring</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earlier Experience -->
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div class="experience-title">
+                                    <h3>IT Security Administrator, C# Developer</h3>
+                                    <span class="company">Various Companies</span>
+                                </div>
+                                <div class="experience-period">
+                                    <span class="period">2012 – 2017</span>
+                                    <span class="location">Russia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Experience -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-plus-circle"></i>
+                    Additional Experience
+                </h2>
+                <div class="section-content">
+                    <div class="additional-item">
+                        <h3>Open Source Contributor</h3>
+                        <p>Contributed to the development of an open-source project, Kafka-UI</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </h2>
+                <div class="section-content">
+                    <div class="education-timeline">
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h3>Apache Spark for Data Engineering Course</h3>
+                                <span class="institution">NewProLab</span>
+                            </div>
+                            <div class="education-details">
+                                <span class="duration">116 hours</span>
+                                <span class="year">2020, Moscow</span>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h3>Java Developer Course</h3>
+                                <span class="institution">IT-Park</span>
+                            </div>
+                            <div class="education-details">
+                                <span class="duration">160 hours</span>
+                                <span class="year">2016, Kazan</span>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h3>Bachelor's in Comprehensive Information Security of Automated Systems</h3>
+                                <span class="institution">Kazan Federal University</span>
+                            </div>
+                            <div class="education-details">
+                                <span class="year">2007 – 2012</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Marat Gumarov. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://t.me/MaratGumarov" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:ikey678@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/MaratGumarov" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
